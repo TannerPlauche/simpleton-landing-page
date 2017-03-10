@@ -1,0 +1,19 @@
+{
+	"indent_with_tabs": true,
+	"end_with_newline": false,
+	"indent_level": 0,
+	"preserve_newlines": false,
+	"max_preserve_newlines": 2,
+	"space_in_paren": true,
+	"space_in_empty_paren": false,
+	"jslint_happy": true,
+	"space_after_anon_function": false,
+	"brace_style": "collapse-preserve-inline",
+	"break_chained_methods": true,
+	"keep_array_indentation": true,
+	"unescape_strings": false,
+	"wrap_line_length": 140,
+	"e4x": true,
+	"comma_first": false,
+	"operator_position": "before-newline"
+}
