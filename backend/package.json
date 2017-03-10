@@ -1,0 +1,20 @@
+{
+	"name": "server",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"start": "nodemon app.js",
+		"test": "mocha -u tdd"
+	},
+	"dependencies": {
+		"express-easy": "~0.1.1",
+		"morgan": "^1.8.1",
+		"nodemailer": "^3.1.5"
+	},
+	"devDependencies": {
+		"chai": "^1.10.0",
+		"mocha": "^2.0.1",
+		"sinon": "^1.12.1",
+		"sinon-chai": "^2.6.0"
+	}
+}
