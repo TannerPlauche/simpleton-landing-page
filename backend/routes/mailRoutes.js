@@ -16,7 +16,7 @@ mailRouter
     .route("/")
     .post(function (req, res) {
         var email = req.body;
-        console.log("email ", email);
+        // console.log("email ", email);
         let mailOptions = {
             from: "" + email.name + email.senderEmail, // sender address
             to: 'tanner@simpletonspeech.com', // list of receivers
@@ -29,13 +29,14 @@ mailRouter
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
                 return res.send(error);
+            } else if (info) {
+                let response = {
+                    success: true,
+                    message: `Message ${info.messageId} sent: ${info.response}`
+                };
+                console.log("response ", response);
+                res.send(response);
             }
-            let response = {
-                success: true,
-                message: `Message ${info.messageId} sent: ${info.response}`
-            };
-            console.log("response ", response);
-            res.send(response);
         });
 
     });
