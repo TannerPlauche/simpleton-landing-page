@@ -27,6 +27,7 @@ mailRouter
         };
 
         transporter.sendMail(mailOptions, (error, info) => {
+            console.log(error, info);
             if (error) {
                 return res.send(error);
             } else if (info) {
