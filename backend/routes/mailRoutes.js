@@ -30,7 +30,12 @@ mailRouter
             if (error) {
                 return res.send(error);
             }
-            res.send({success: true, message: `Message ${info.messageId} sent: ${info.response}`});
+            let response = {
+                success: true,
+                message: `Message ${info.messageId} sent: ${info.response}`
+            };
+            console.log("response ", response);
+            res.send(response);
         });
 
     });
